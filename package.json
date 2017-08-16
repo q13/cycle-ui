@@ -1,0 +1,21 @@
+{
+  "name": "cycle-ui",
+  "version": "1.0.0",
+  "description": "A UI components library using cycle.js for product",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "xstream": "~10.9.0",
+    "@cycle/run": "~3.2.0",
+    "@cycle/dom": "~18.1.0"
+  },
+  "keywords": [
+    "UI",
+    "component",
+    "cycle.js"
+  ],
+  "author": "13",
+  "license": "ISC"
+}

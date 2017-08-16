@@ -4,12 +4,33 @@
   "description": "A UI components library using cycle.js for product",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "server": "node ./tools/server.js",
+    "example": "node ./tools/build-example.js --mode dev"
   },
   "dependencies": {
     "xstream": "~10.9.0",
     "@cycle/run": "~3.2.0",
     "@cycle/dom": "~18.1.0"
+  },
+  "devDependencies": {
+    "babel-core": "6.25.0",
+    "babel-loader": "^7.1.1",
+    "babel-plugin-syntax-async-functions": "^6.13.0",
+    "babel-plugin-transform-regenerator": "^6.24.1",
+    "babel-preset-env": "1.6.0",
+    "commander": "2.11.0",
+    "fs-extra": "0.26.7",
+    "log4js": "2.0.1",
+    "script-loader": "0.7.0",
+    "socket.io": "^2.0.3",
+    "walk": "2.3.9",
+    "webpack": "3.5.4",
+    "connect": "3.6.3",
+    "serve-static": "1.12.4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/q13/cycle-ui"
   },
   "keywords": [
     "UI",

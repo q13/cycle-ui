@@ -1,23 +1,24 @@
 /**
  * @Date:   2017-08-16T14:13:21+08:00
- * @Last modified time: 2017-08-16T15:59:50+08:00
+ * @Last modified time: 2017-08-17T16:01:19+08:00
  */
 import xs from 'xstream';
 import {run} from '@cycle/run';
 import {makeDOMDriver, div} from '@cycle/dom';
+import Modal from '../../../../src/modal/index';
 
 function main(sources) {
+  const visible$ = xs.periodic(3000).map((v) => (v % 2 === 0)).debug('visible');
+  visible$.addListener(() => {});
   const sinks = {
-    DOM: sources.DOM.select('input').events('click')
-      .map(ev => ev.target.checked)
-      .startWith(false)
-      .map(_ =>
-        div(['test2'])
-      )
+    DOM: xs.of(Modal({
+      DOM: sources.DOM,
+      visible: visible$
+    }).DOM).flatten()
   };
   return sinks;
 }
-const drivers = {
+
+run(main, {
   DOM: makeDOMDriver('#app')
-};
-run(main, drivers);
+});

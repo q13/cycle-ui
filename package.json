@@ -8,9 +8,10 @@
     "example": "node ./tools/build-example.js --mode dev"
   },
   "dependencies": {
-    "xstream": "~10.9.0",
+    "@cycle/dom": "~18.1.0",
     "@cycle/run": "~3.2.0",
-    "@cycle/dom": "~18.1.0"
+    "ramda": "^0.24.1",
+    "xstream": "~10.9.0"
   },
   "devDependencies": {
     "babel-core": "6.25.0",
@@ -18,15 +19,16 @@
     "babel-plugin-syntax-async-functions": "^6.13.0",
     "babel-plugin-transform-regenerator": "^6.24.1",
     "babel-preset-env": "1.6.0",
+    "babel-preset-stage-0": "^6.24.1",
     "commander": "2.11.0",
+    "connect": "3.6.3",
     "fs-extra": "0.26.7",
     "log4js": "2.0.1",
     "script-loader": "0.7.0",
+    "serve-static": "1.12.4",
     "socket.io": "^2.0.3",
     "walk": "2.3.9",
-    "webpack": "3.5.4",
-    "connect": "3.6.3",
-    "serve-static": "1.12.4"
+    "webpack": "3.5.4"
   },
   "repository": {
     "type": "git",

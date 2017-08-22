@@ -70,9 +70,9 @@ function exer({entries, mode = 'dev'}) {
                   useBuiltIns: true,
                   modules: false,
                   loose: true
-                }]
+                }], ["stage-0"]
               ],
-              plugins: ["syntax-async-functions","transform-regenerator"]
+              plugins: ["syntax-async-functions", "transform-regenerator"]
             }
           }]
         }]
